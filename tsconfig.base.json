@@ -15,8 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-office-hour-nestjs/api-interfaces": [
-        "libs/api-interfaces/src/index.ts"
+      "@nx-office-hour-nestjs/api/data-access-article": [
+        "libs/api/data-access-article/src/index.ts"
+      ],
+      "@nx-office-hour-nestjs/api/feature-article": [
+        "libs/api/feature-article/src/index.ts"
+      ],
+      "@nx-office-hour-nestjs/api/feature-config": [
+        "libs/api/feature-config/src/index.ts"
+      ],
+      "@nx-office-hour-nestjs/api/utils-config": [
+        "libs/api/utils-config/src/index.ts"
       ]
     }
   },

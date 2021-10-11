@@ -30,7 +30,16 @@
     "api": {
       "tags": []
     },
-    "api-interfaces": {
+    "api-data-access-article": {
+      "tags": []
+    },
+    "api-feature-article": {
+      "tags": []
+    },
+    "api-feature-config": {
+      "tags": []
+    },
+    "api-utils-config": {
       "tags": []
     },
     "post": {
