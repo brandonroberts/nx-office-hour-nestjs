@@ -18,6 +18,9 @@
       "@nx-office-hour-nestjs/api/data-access-article": [
         "libs/api/data-access-article/src/index.ts"
       ],
+      "@nx-office-hour-nestjs/api/data-access-dtos": [
+        "libs/api/data-access-dtos/src/index.ts"
+      ],
       "@nx-office-hour-nestjs/api/feature-article": [
         "libs/api/feature-article/src/index.ts"
       ],
@@ -26,6 +29,9 @@
       ],
       "@nx-office-hour-nestjs/api/utils-config": [
         "libs/api/utils-config/src/index.ts"
+      ],
+      "@nx-office-hour-nestjs/article/data-access-api": [
+        "libs/article/data-access-api/src/index.ts"
       ]
     }
   },

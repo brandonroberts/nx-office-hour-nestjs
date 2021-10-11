@@ -5,4 +5,11 @@
     src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
     alt="Nx - Smart, Extensible Build Framework"
   />
+
+  <ul>
+    <li *ngFor="let article of articles$ | async">
+      Text: {{ article.text }}
+      Author: {{ article.author }}
+    </li>
+  </ul>
 </div>

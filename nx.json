@@ -33,6 +33,9 @@
     "api-data-access-article": {
       "tags": []
     },
+    "api-data-access-dtos": {
+      "tags": []
+    },
     "api-feature-article": {
       "tags": []
     },
@@ -40,6 +43,9 @@
       "tags": []
     },
     "api-utils-config": {
+      "tags": []
+    },
+    "article-data-access-api": {
       "tags": []
     },
     "post": {

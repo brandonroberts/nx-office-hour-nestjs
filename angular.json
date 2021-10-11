@@ -13,7 +13,15 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": ["apps/api/src/assets"],
+            "tsPlugins": [
+              {
+                "name": "@nestjs/swagger/plugin",
+                "options": {
+                  "dtoFileNameSuffix": [".dto.ts", ".model.ts"]
+                }
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -81,6 +89,28 @@
         }
       }
     },
+    "api-data-access-dtos": {
+      "root": "libs/api/data-access-dtos",
+      "sourceRoot": "libs/api/data-access-dtos/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/api/data-access-dtos/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/data-access-dtos"],
+          "options": {
+            "jestConfig": "libs/api/data-access-dtos/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "api-feature-article": {
       "root": "libs/api/feature-article",
       "sourceRoot": "libs/api/feature-article/src",
@@ -143,6 +173,31 @@
           "options": {
             "jestConfig": "libs/api/utils-config/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "article-data-access-api": {
+      "projectType": "library",
+      "root": "libs/article/data-access-api",
+      "sourceRoot": "libs/article/data-access-api/src",
+      "prefix": "nx-office-hour-nestjs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/article/data-access-api"],
+          "options": {
+            "jestConfig": "libs/article/data-access-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/article/data-access-api/src/**/*.ts",
+              "libs/article/data-access-api/src/**/*.html"
+            ]
           }
         }
       }
